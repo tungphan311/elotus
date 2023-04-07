@@ -37,7 +37,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-> Please record screen to a GIF file and attach link here
+[https://github.com/tungphan311/elotus/blob/main/live-demo.mp4]
 
 ## Submit
 
