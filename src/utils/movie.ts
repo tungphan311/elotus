@@ -20,3 +20,16 @@ export const getDateName = (dateStr: string, locale: string = "en-US") => {
   let date = new Date(dateStr);
   return date.toLocaleDateString(locale, { dateStyle: "full" });
 };
+
+export const getLanguageName = (language: string) => {
+  const languageNamesInEnglish = new Intl.DisplayNames(["en"], {
+    type: "language",
+  });
+
+  const lang = languageNamesInEnglish.of(language);
+
+  return lang;
+};
+
+export let formatTime = (n: number) =>
+  `${Math.trunc(n / 60)}h ${`0${n % 60}`.slice(-2)}min`;
