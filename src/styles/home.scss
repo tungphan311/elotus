@@ -1,0 +1,45 @@
+@import "./variables";
+
+.home {
+  background: linear-gradient(
+    to right top,
+    #101011,
+    #171717,
+    #1d1d1d,
+    #232323,
+    #292929
+  );
+  height: 50vh;
+  color: $white;
+  padding: 0 3rem;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 2.5rem;
+  }
+
+  h2 {
+    font-size: 4rem;
+    font-weight: 900;
+  }
+
+  img {
+    width: 200px;
+  }
+
+  p {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+
+.home-text {
+  text-align: center;
+}

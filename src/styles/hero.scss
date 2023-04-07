@@ -1,0 +1,57 @@
+@import "./variables";
+
+.hero-movie {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 3rem 3rem 6rem 3rem;
+  background: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%),
+    url("https://cdn.wallpapersafari.com/20/36/D6KGrV.jpg") no-repeat top/cover;
+  background-blend-mode: multiply;
+  position: relative;
+  z-index: 1;
+  color: $white;
+}
+
+.hero-movie-container {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+
+  h2 {
+    font-size: clamp(3rem, 5vw, 4rem);
+  }
+}
+
+.hero-footer {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.hero-footer .add-btn {
+  margin-top: 0;
+}
+
+@media screen and (max-width: 640px) {
+  .hero-movie {
+    align-items: center;
+    padding: 1rem;
+    padding-bottom: 3rem;
+  }
+
+  .hero-movie-container {
+    text-align: center;
+    align-items: center;
+  }
+
+  .hero-footer {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+}

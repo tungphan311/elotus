@@ -5,10 +5,11 @@ import Loader from "../components/Loader";
 import Search from "../components/Search";
 import Movies from "../components/Movies";
 import InfiniteLoader from "../components/InfiniteLoader";
+import Hero from "../components/Hero";
 
 function NowPlaying() {
   const { ref, inView } = useInView();
-  const { movies, error, isLoadingMore, size, setSize } =
+  const { movies, isLoadingMore, size, setSize } =
     useInfiniteLoad("now_playing");
 
   useEffect(() => {
@@ -16,11 +17,12 @@ function NowPlaying() {
     if (inView) {
       setSize(size + 1);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [inView]);
 
   return (
     <main>
+      <Hero />
+
       <section className="section">
         <div className="container">
           <div>

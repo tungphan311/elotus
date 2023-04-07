@@ -10,10 +10,10 @@ body {
   font-family: "Outfit", sans-serif;
   font-size: 1.6rem;
   line-height: 1.6;
-  /* font-weight: 600; */
   position: relative;
   overflow-x: hidden;
-
+  margin: 0;
+  padding: 0;
   color: var(--text-clr);
 }
 
@@ -21,6 +21,7 @@ h1,
 h2,
 h3 {
   line-height: 1.2;
+  margin: 0;
 }
 
 a {

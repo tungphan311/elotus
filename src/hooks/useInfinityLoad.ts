@@ -1,9 +1,7 @@
 import useSWRInfinite from "swr/infinite";
 import { IMovie, IMovieResponse } from "../interfaces/movie";
 import { flattenArr } from "../utils/arrray";
-
-const apiKey = import.meta.env.VITE_API_KEY;
-const apiURL = import.meta.env.VITE_API_URL;
+import { API_KEY, API_URL } from "../constants";
 
 const mapResponseToMovies = (data: IMovieResponse[]): IMovie[] => {
   return flattenArr(data.map((item) => item.results));
@@ -12,7 +10,7 @@ const mapResponseToMovies = (data: IMovieResponse[]): IMovie[] => {
 const useInfiniteLoad = (type: string) => {
   const { data, error, size, setSize } = useSWRInfinite<IMovieResponse>(
     (index) =>
-      `${apiURL}/movie/${type}/?api_key=${apiKey}&language=en-US&page=${
+      `${API_URL}/movie/${type}/?api_key=${API_KEY}&language=en-US&page=${
         index + 1
       }`
   );

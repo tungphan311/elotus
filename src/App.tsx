@@ -1,3 +1,4 @@
+import Hero from "./components/Hero";
 import AppRoute from "./routes";
 
 function App() {
