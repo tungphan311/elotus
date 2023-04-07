@@ -2,8 +2,6 @@
 
 **Movies** is a movies app using the [The Movie Database API](https://developers.themoviedb.org/3).
 
-- Total time: 72 hours (please no more!)
-
 ## User Stories
 
 The following **required** functionality is completed:
@@ -39,11 +37,16 @@ Here's a walkthrough of implemented user stories:
 
 ![](https://github.com/tungphan311/elotus/blob/main/live-demo.mp4)
 
-## Submit
+## Installation
 
-**When you're done, send us back a link to a repository with your source code, with a description of what you've done and any build instructions in the readme!**
-
-> You can use this file as the readme (please update what you've done, build instructions).
+- Clone project then move to project directory and run this command ```yarn```
+- Before running project, please create a new file name ```.env``` with 2 values:
+``` 
+VITE_API_URL=https://api.themoviedb.org/3
+VITE_API_KEY=<please use your own api key>
+```
+- After add value to environment file, please run this command ```yarn dev```
+    
 
 ## License
 
