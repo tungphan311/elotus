@@ -1,13 +1,14 @@
+import React from "react";
 import Hero from "../components/Hero";
 import MovieSection from "../components/MovieSection";
 
-function NowPlaying() {
+function TopRated() {
   return (
     <main>
       <Hero />
-      <MovieSection type="now_playing" title="Now Playing Movies" />
+      <MovieSection type="top_rated" title="Top Rated Movies" />
     </main>
   );
 }
 
-export default NowPlaying;
+export default TopRated;

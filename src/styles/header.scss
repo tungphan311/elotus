@@ -171,6 +171,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 3rem 2rem;
     width: 100%;
+    padding: 0;
 
     li {
       a {
@@ -205,5 +206,9 @@
 
   .open {
     transform: translateY(0);
+  }
+
+  .container {
+    justify-content: space-between;
   }
 }
