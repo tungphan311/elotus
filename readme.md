@@ -13,7 +13,7 @@ The following **required** functionality is completed:
 - [x] Add a search bar.
 - [x] User can view movie details by tapping on a cell.
 - [x] User sees loading state while waiting for the API.
-- [ ] User sees an error message when there is a network error.
+- [x] User sees an error message when there is a network error.
 - [x] Simple responsive.
 
 The following **optional** features are implemented:
