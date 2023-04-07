@@ -16,7 +16,6 @@ function MovieSection({ type, title }: MovieSectionProps) {
   const { movies, isLoadingMore, size, setSize } = useInfiniteLoad(type);
 
   useEffect(() => {
-    console.log(inView);
     if (inView) {
       setSize(size + 1);
     }

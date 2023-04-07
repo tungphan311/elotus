@@ -6,6 +6,7 @@ import "../styles/movie-detail.scss";
 import TitularInfo from "../components/TitularInfo";
 import { IMovieDetail } from "../interfaces/movie";
 import Status from "../components/Status";
+import Error from "../components/Error";
 
 function MovieDetail() {
   const { id } = useParams();
@@ -14,6 +15,7 @@ function MovieDetail() {
   );
 
   if (!data) return <Loader />;
+  if (error) return <Error />;
 
   const {
     poster_path: posterPath,

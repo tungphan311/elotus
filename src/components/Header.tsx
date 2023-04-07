@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
-import { Link, NavLink, useLocation } from "react-router-dom";
-import { ROUTES } from "../constants";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { CgMenuHotdog } from "react-icons/cg";
+import { IoFilm, IoHome, IoTv } from "react-icons/io5";
 import { MdOutlineRestaurantMenu } from "react-icons/md";
-import { IoTv, IoHome, IoFilm, IoBookmarks } from "react-icons/io5";
+import { Link, NavLink } from "react-router-dom";
+import { ROUTES } from "../constants";
 import "../styles/header.scss";
 
 function Header() {
