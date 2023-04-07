@@ -1,0 +1,209 @@
+@import "./variables";
+
+.header {
+  padding: 1rem 3rem;
+  color: $white;
+  position: fixed;
+  top: 0;
+  background: transparent;
+  width: 100%;
+  z-index: 10;
+  transition: all 300ms ease-in-out;
+
+  &.selected {
+    background: $white;
+    color: $textColor;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.fixednav {
+  background: linear-gradient(
+    90deg,
+    #232323,
+    #232323,
+    #222222,
+    #222222,
+    #222222,
+    #222222,
+    #212121,
+    #212121
+  );
+}
+
+.logo {
+  letter-spacing: 1px;
+  font-weight: 900;
+}
+
+.nav {
+  display: flex;
+  gap: 5rem;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+
+  li {
+    position: relative;
+    z-index: 1;
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-transform: capitalize;
+      margin-right: 1rem;
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        background: $white;
+        transform: scale(0);
+        transform-origin: left;
+        transition: all 300ms ease-in-out;
+      }
+
+      &:hover::after {
+        transform: scale(1);
+        transform-origin: right;
+      }
+
+      &.active {
+        background: $accent;
+        color: $white;
+        padding: 0.3rem 0.7rem;
+        border-radius: $borderRadius;
+
+        &::after {
+          all: unset;
+        }
+      }
+    }
+  }
+}
+
+/* signout and signin buttons */
+.btn-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  padding: 0.25rem 2rem;
+  border: 2px solid $white;
+  color: $white;
+  border-radius: $borderRadius;
+  transition: all 300ms ease-in-out;
+}
+
+.btn:hover {
+  background: $accent;
+  border-color: $accent;
+  color: $white;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.hamburger {
+  display: none;
+}
+
+@media screen and (max-width: 640px) {
+  .header {
+    font-size: 1.6rem;
+    padding: 1.2rem;
+  }
+
+  .hamburger {
+    display: block;
+    line-height: 0;
+  }
+
+  .nav {
+    all: unset;
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    width: 100%;
+    padding: 2rem 0.5rem;
+    background: $white;
+    color: $bgColor;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    z-index: 999;
+    box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.006),
+      6.7px 6.7px 5.3px rgba(0, 0, 0, 0.008),
+      12.5px 12.5px 10px rgba(0, 0, 0, 0.01),
+      22.3px 22.3px 17.9px rgba(0, 0, 0, 0.012),
+      41.8px 41.8px 33.4px rgba(0, 0, 0, 0.014),
+      100px 100px 80px rgba(0, 0, 0, 0.02);
+
+    transform: translateY(-1000px);
+    transition: transform 325ms ease-in-out;
+  }
+
+  .nav-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem 2rem;
+    width: 100%;
+
+    li {
+      a {
+        gap: 2rem;
+        justify-content: center;
+      }
+    }
+  }
+
+  .btn-container {
+    padding: 1.2rem 2rem;
+    position: absolute;
+    top: 18rem;
+    left: 0;
+    width: 100%;
+    justify-content: space-between;
+    background: $accent;
+    z-index: 999;
+    transform: translateY(-1000px);
+    transition: transform 325ms ease-in-out;
+
+    .btn {
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .btn {
+    color: $white;
+    border-color: $white;
+  }
+
+  .open {
+    transform: translateY(0);
+  }
+}
